@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Luyện tập Flexbox</title>
+    <link rel="stylesheet" href="assets/CSS/Trangthongtin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="assets/CSS/base.css">
+    <link rel="stylesheet" href="assets/CSS/TrangTinTuc.css">
+    <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/test2.css">
+    <link rel="shortcut icon" href="assets/img/coconut-tree.png" type="image/x-icon">
+</head>
+
+<body style="display: flex;flex-direction: column;">
+    <!-- header -->
+    <header class="header">
+        <!-- navbar -->
+        <nav class="header__navbar">
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item">Hotline:</li>
+                <li class="header__navbar-item1">0339531041</li>
+            </ul>
+
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item separate">
+                    <a href="./Sign_up.html" class="navbar-item-link">Đăng ký</a>
+                </li>
+                <li class="header__navbar-item">
+                    <a href="./sign_in.html" class="navbar-item-link">Đăng nhập</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Search -->
+        <div class="header_search">
+            <img src="assets/img/Logo1.png" alt="" class="header_logo">
+
+            <div class="search_input">
+                <input type="text" placeholder="Tìm kiếm..." required>
+                <div class="input-search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="history">
+                    <h3>Lịch sử tìm kiếm</h3>
+                    <ul class="history_list">
+                        <li class="history_list-item">Vịnh Hạ Long</li>
+                        <li class="history_list-item">Đà Nẵng</li>
+                        <li class="history_list-item">Sapa</li>
+                        <li class="history_list-item">Cố đô Huế</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="search_menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item"><a href="index.html">TRANG CHỦ</a></li>
+                    <li class="menu_list-item"><a href="http://">KHÁCH SẠN</a></li>
+                    <li class="menu_list-item"><a href="http://">DỊCH VỤ</a></li>
+                    <li class="menu_list-item"><a href="http://">TIN TỨC</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div style="position: relative;">
+        <!-- container -->
+        <div class="container">
+            <div class="div-name">
+                <p class="name">Du lịch Fansipan World Legend (SAPA)</p>
+                <!--Tên địa điểm du lịch, dòng chữ bé ngay dưới header-->
+            </div>
+            <div>
+                <div class="div-imgbg">
+                    <div class="background">
+                        <div class="farther">
+                            <div class="son1">
+                                <div class="grid-pic">
+                                    <div width="100%">
+                                        <img src="assets/img/abc.jpg" class="main-pic"> <!--Ảnh to-->
+                                    </div>
+                                    <div class="five-pic">
+                                        <div class="div-small-pic">
+                                            <!--Đây là 1 ô ảnh nhỏ, thêm bớt bằng cách thêm hoặc xoá 1 div đi-->
+                                            <img src="assets/img/1(2).jpg" class="small-pic">
+                                        </div>
+                                        <div class="div-small-pic">
+                                            <img src="assets/img/1(2).jpg" class="small-pic">
+                                        </div>
+                                        <div class="div-small-pic">
+                                            <img src="assets/img/1(2).jpg" class="small-pic">
+                                        </div>
+                                        <div class="div-small-pic">
+                                            <img src="assets/img/1(2).jpg" class="small-pic">
+                                        </div>
+                                        <div class="div-small-pic">
+                                            <img src="assets/img/1(2).jpg" class="small-pic">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="son2">
+                                <div style="margin-left: 5%"> <!--Tên của tour-->
+                                    <p class="name-tour">Hãy nhập tên Tour ở đây, nên viết in hoa hết</p>
+                                </div>
+                                <div class="div-pri_star">
+                                    <div class="div-star"> <!--Bao nhiêu sao thì dùng bấy nhiêu div-->
+                                        <div>
+                                            <img src="assets/img/icons8-star-48.png" alt="star" class="star-ico">
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/icons8-star-48.png" alt="star" class="star-ico">
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/icons8-star-48.png" alt="star" class="star-ico">
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/icons8-star-48.png" alt="star" class="star-ico">
+                                        </div>
+                                        <div>
+                                            <img src="assets/img/icons8-star-48.png" alt="star" class="star-ico">
+                                        </div>
+                                    </div>
+                                    <div class="div-price">5.000.000 VNĐ</div> <!--Nhập giá tour-->
+                                </div>
+                                <div class="div-intro">
+                                    <div class="gt">GIỚI THIỆU</div>
+                                    <div class="intro">Viết giới thiệu nhanh ở đây</div>
+                                </div>
+                                <div style="margin-left: 5%;margin-top:3%;">
+                                    <hr>
+                                </div>
+                                <div class="info-tour">
+                                    <div class="div-time-tour">
+                                        <div>
+                                            <img src="assets/img/calendar-icon.png" alt="" class="calendar-ico">
+                                        </div>
+                                        <div>
+                                            <span style="font-size: 1.5em;font-weight: bold;color: white;">Thời gian
+                                                tour:
+                                            </span><span style="font-size: 1.6em;color: white">Nhập thời gian của
+                                                tour</span>
+                                        </div>
+                                    </div>
+                                    <div class="div-loca-tour">
+                                        <div>
+                                            <img src="assets/img/icons8-location-48.png" alt="" class="location-ico">
+                                        </div>
+                                        <div style="line-height: 2em;">
+                                            <span style="font-size: 1.5em;font-weight: bold;color: white;">Địa điểm tham
+                                                quan:
+                                            </span><span style="font-size: 1.6em;color: white">Nhập vị trí địa điểm (ở
+                                                đâu)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="div-book-now">
+                                    <div class="book-now">ĐẶT NGAY</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-main">
+                <div class="div-content">
+                    <div style="width:100%;min-width: 300px;display: flex;flex-direction: column;">
+                        <!--Dán nội dung giới thiệu ngắn gọn về tour ở đây-->
+                        <div class="intro-header">Giới thiệu ngắn gọn về tour</div>
+                        <div>
+                            <div class="header-highlight-tour" id="diemnhan">ĐIỂM NỔI BẬT TRONG CHƯƠNG TRÌNH:</div>
+                            <div class="list-highlights-tour">
+                                <!--Bao nhiêu nổi bật bấy nhiêu div-->
+                                <div class="highlight-tour">CÁP TREO FANSIPAN DÀI NHẤT THẾ GIỚI</div>
+                                <div class="highlight-tour">KHU VƯỜN HOA TAM GIÁC MẠCH VỚI HÀNG TRĂM LOÀI HOA</div>
+                                <div class="highlight-tour">KHU DU LỊCH GIẢI TRÍ LỚN TẢN VIÊN SƠN</div>
+                                <div class="highlight-tour">CÔNG VIÊN DU LỊCH SUN WORLD</div>
+                                <div class="highlight-tour">KHU DU LỊCH CỐ ĐÔ HOÀNG THÀNH THÁI</div>
+                                <div class="highlight-tour">KHU ẨM THỰC CỦA SUN WORLD FANSIPAN LEGEND</div>
+                            </div>
+                        </div>
+                        <div class="jour" id="lichtrinh">BẢNG LỊCH TRÌNH CỦA TOUR</div>
+                        <!--Nếu là bảng giá của tour thì đổi tên, dán ảnh vào-->
+                        <div class="table-jour">
+                            <img src="assets/img/lichtrinhsunworld.jpg" alt="" class="table-img">
+                        </div>
+                        <div> <!--     <== div ngày, dán xuống dưới div này để thêm lịch trình ngày mới-->
+                            <div class="div-jour-day">
+                                <div class="day">NGÀY 1:</div>
+                                <div class="line-col"></div>
+                                <div class="info-jour-day">Nhập nội dung của ngày 1</div>
+                            </div>
+                            <div class="detail-jour-day">
+                                <!--div detail-jour-day là chi tiết trong ngày, dán div này xuống dưới (vẫn phải trong div ngày) để thêm dòng chi tiết mới -->
+                                <div class="detail-jour-day-head">07h00</div> <!--Head này có thể ghi giờ,gi thời gian nào đó, hoặc có thể xoá đi-->>
+                                <div class="detail-jour-day-info">Từ trung tâm thị trấn Sapa có hai cách để có thể đến
+                                    được ga cáp treo. Bạn có thể di chuyển bằng tàu leo núi Mường Hoa hoặc thuê xe máy
+                                    riêng. Tại Ga bạn sẽ mua vé để trải nghiệm và chinh phục Fansipan.</div>
+                            </div>
+                            <div class="detail-jour-day">
+                                <div class="detail-jour-day-head">08h00</div>
+                                <div class="detail-jour-day-info">Sau khi đến ga cáp treo Sunworld Fansipan Legend, bạn
+                                    chỉ cần xếp hàng và mua vé. Vì vé chỉ có hiệu lực trong ngày nên bạn không nên đặt
+                                    trước tránh trường hợp không đi được. Thời gian di chuyển trên cáp treo để lên được
+                                    đỉnh Fansipan sẽ chỉ mất khoảng 15 phút. </div>
+                            </div>
+                            <div class="detail-jour-day">
+                                <div class="detail-jour-day-info">Chỉ 15 phút ngồi trên cáp treo nhưng bạn sẽ được thấy
+                                    một góc nhìn rất khác của đất trời Tây Bắc. Tùy vào thời điểm du lịch Sapa, từ trên
+                                    cao bạn có thể thấy thung lũng Mường Hoa mỗi mùa hiện lên một vẻ đẹp riêng. Qua ô
+                                    cửa sổ, bạn sẽ được thấy khung cảnh trùng điệp của dãy Hoàng Liên Sơn và vô số những
+                                    thửa ruộng bậc thang trong làn sương mờ ảo.</div>
+                            </div>
+                            <div class="div-img-detail">
+                                <img src="assets/img/captreosunworld.jpg" alt="" class="img-detail">
+                                <div class="info-img">Ngắm nhìn toàn cảnh thung lũng Mường Hoa tuyệt đẹp.</div>
+                            </div>
+                        </div>
+                        <div class="detail-jour-day">
+                            <div class="detail-jour-day-head" id="ghichu">Những điều cần lưu ý</div> <!--Không có lưu ý hoặc là nội dung nào đó có thể đổi tên hoặc xoá-->
+                        </div>
+                        <div class="div-note">
+                            <ul> <!--Thêm 1 dòng mới bằng cách thêm 1 <li> -->
+                                <li class="note">Vui lòng đeo khẩu trang trong suốt chuyến đi của bạn và tuân thủ các
+                                    biện pháp phòng chống COVID-19</li>
+                                <li class="note">Bạn nên mặc trang phục giữ ấm hoặc mang theo áo ấm vì nhiệt độ ở trên
+                                    đỉnh Fanspan sẽ thấp hơn nhiều so với ở thị trấn Sapa
+                                </li>
+                                <li class="note">Đặt xe đưa đón giữa Sapa và Hà Nội với giá tốt nhất, nhận vé thuận tiện
+                                    và yên tâm trong suốt chuyến đi
+                                </li>
+                                <li class="note">Trên đỉnh núi sẽ có gió khá to, bạn nên lựa chọn trang phục phù hợp và
+                                    mang giày leo núi để thoải mái hơn</li>
+                                <li class="note">Nên mang theo một ít tiền mặt để thoải mái mua sắm vài món quà lưu niệm
+                                    trên đỉnh núi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-support">
+                    <div class="div-box-sp1">
+                        <div class="box-sp1" style="display:flex;justify-content: space-around;align-items: center;">
+                            <div class="box-sp1-word1">
+                                Chỉ từ:
+                            </div>
+                            <div class="box-sp1-price">
+                                5.000.000 VNĐ   <!--Đổi giá tour tương ứng ở đây-->
+                            </div>
+                        </div>
+                        <div class="box-sp1" style="display: flex;justify-content: center;">
+                            <input type="text" class="box-sp1-input">
+                        </div>
+                        <div class="box-sp1" style="display: flex;justify-content: center;">
+                            <input type="submit" value="ĐẶT TOUR" class="box-sp1-submit">
+                        </div>
+                    </div>
+                    <div class="div-box-sp2">
+                        <div class="box-sp2"><a class="box-sp2-div" href="#diemnhan">Điểm nhấn hành trình</a></button>
+                        </div>
+                        <div class="box-sp2"><a class="box-sp2-div" href="#lichtrinh">Lịch trình</a></div>
+                        <div class="box-sp2"><a class="box-sp2-div" href="#ghichu">Ghi chú</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-relate-tour">
+                <div class="name-relate-tour">TOUR LIÊN QUAN</div>
+                <div class="line">
+                    <hr>
+                </div>
+                <div class="list-relate-tour">
+                    <div class="block"> <!--Một ô tour liên quan bắt đầu từ div này, thêm bớt bằng cách thêm hoặc xoá, tối đa là 4, nhiều hơn sẽ xấu-->
+                        <a href="">
+                            <div class="wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ9_xJpJ_vOPa8w_V1zePN16J7lK9QmcQgug&usqp=CAU"
+                                    alt="">
+                            </div>
+                            <div class="content-tour">
+                                <h3>Đảo phú quý (bình thuận)</h3>
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <div class="block-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>3 ngày 2 đêm</p>
+                                </div>
+                                <div class="block-item">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>16/03/2023</p>
+                                </div>
+                                <div class="total">
+                                    <div class="block-item">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p> Còn 5 chỗ</p>
+                                    </div>
+                                    <p style="color:#0C97FA; font-size: 2rem; font-weight: 700;margin-right: 15px;">
+                                        1.700.000 đ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="">
+                            <div class="wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ9_xJpJ_vOPa8w_V1zePN16J7lK9QmcQgug&usqp=CAU"
+                                    alt="">
+                            </div>
+                            <div class="content-tour">
+                                <h3>Đảo phú quý (bình thuận)</h3>
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <div class="block-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>3 ngày 2 đêm</p>
+                                </div>
+                                <div class="block-item">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>16/03/2023</p>
+                                </div>
+                                <div class="total">
+                                    <div class="block-item">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p> Còn 5 chỗ</p>
+                                    </div>
+                                    <p style="color:#0C97FA; font-size: 2rem; font-weight: 700;margin-right: 15px;">
+                                        1.700.000 đ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="">
+                            <div class="wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ9_xJpJ_vOPa8w_V1zePN16J7lK9QmcQgug&usqp=CAU"
+                                    alt="">
+                            </div>
+                            <div class="content-tour">
+                                <h3>Đảo phú quý (bình thuận)</h3>
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <div class="block-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>3 ngày 2 đêm</p>
+                                </div>
+                                <div class="block-item">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>16/03/2023</p>
+                                </div>
+                                <div class="total">
+                                    <div class="block-item">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p> Còn 5 chỗ</p>
+                                    </div>
+                                    <p style="color:#0C97FA; font-size: 2rem; font-weight: 700;margin-right: 15px;">
+                                        1.700.000 đ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="">
+                            <div class="wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ9_xJpJ_vOPa8w_V1zePN16J7lK9QmcQgug&usqp=CAU"
+                                    alt="">
+                            </div>
+                            <div class="content-tour">
+                                <h3>Đảo phú quý (bình thuận)</h3>
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <div class="block-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>3 ngày 2 đêm</p>
+                                </div>
+                                <div class="block-item">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>16/03/2023</p>
+                                </div>
+                                <div class="total">
+                                    <div class="block-item">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p> Còn 5 chỗ</p>
+                                    </div>
+                                    <p style="color:#0C97FA; font-size: 2rem; font-weight: 700;margin-right: 15px;">
+                                        1.700.000 đ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%;background-color: red">
+
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="site-footer">
+            <div class="footer-row">
+                <div class="footer-column1">
+                    <h2>Thông tin liên hệ</h2>
+                    <p>Địa chỉ: Trụ Sở Chính: Số 62 Đường số 01, Khu Dân Cư Cityland Part Hill, Phường 10, Quận Gò
+                        Vấp
+                    </p>
+                    <p style="font-size:2rem; font-weight: 700;">Điện thoại: 0339531041</p>
+                </div>
+
+                <div class="footer-column2">
+                    <h2>Góc khách hàng</h2>
+                    <ul class="footer-list">
+                        <li><a href="">Chính sách đặt tour</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Cẩm nang du lịch</a></li>
+                        <li><a href="">Phiếu góp ý</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column3">
+                    <h2>Dịch vụ</h2>
+                    <ul class="footer-list">
+                        <li><a href="">Tour du lịch</a></li>
+                        <li><a href="">Cho thuê xe</a></li>
+                        <li><a href="">Khách sạn</a></li>
+                        <li><a href="">Vé máy bay</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column4">
+                    <h2>Kết nối với chúng tôi</h2>
+                    <div class="footer-column4-icon">
+                        <a href="" class="footer-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" class="footer-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="" class="footer-icon"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="" class="footer-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDP218_tEqpfdvlhP2zZgfZ953w0AGfyQbnQ&usqp=CAU"
+            alt="" class="back-to-top">
+    </a>
+</body>

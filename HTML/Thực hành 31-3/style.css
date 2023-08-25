@@ -1,0 +1,37 @@
+.table-data{
+    width:220px;
+    height: 30px;
+
+}
+.button{
+    border: none;
+    color:black;
+    background-color: #ffffff;
+    width: 220px;
+    height: 30px;
+    cursor: pointer;
+}
+.noidung{
+    border: none;
+    color:black;
+    background-color: #f0db80;
+    width: 220px;
+    height: 30px;
+    cursor: pointer;
+}
+.divnd{
+    border-style: groove;
+    border-color: orange;
+    width: 100%;
+    height: 260px;
+    
+}
+.fontdivnd{
+    font-size: 20px;
+    color:black;
+    padding-left: 10px;
+}
+.divqc{
+    width: 20%;
+    border-style: groove;
+}

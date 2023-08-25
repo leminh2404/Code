@@ -1,0 +1,124 @@
+.anhnho{
+    width: 11.3%;
+    height: 80px;
+    object-fit: cover;
+    border-style: groove;
+    border-color: wheat;
+    border-width: 2px;
+    cursor: pointer;
+}
+.divImgBg {
+    width: 100%;
+    border-width: 2px;
+    border-color: black;
+    border-left: 3px;
+}
+.imgbg {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    position: absolute;
+}
+.lopphu {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: #2CAEE2;
+    opacity: 0.7;
+}
+.Smallimg {
+    width: 47%;
+    border:groove;
+    border-color: white;
+    cursor: pointer;
+}
+.divFather {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.divImgMain {
+    position: relative;
+    left: 50px;
+}
+.div4 {
+    left: 51px;
+    bottom: 145px;
+    width: 100%;
+    position: absolute;
+}
+.tieude {
+    font-family: UTM Avo;
+    font-size: 25px;
+    color: white;
+}
+.ten {
+    width: 40%;
+    position: absolute;
+    top: -5%;
+    right: 5%;
+}
+.divStar {
+    display: flex;
+    position: absolute;
+    top: 140px;
+}
+.star {
+    width: 50%;
+}
+.price {
+    position: relative;
+    top: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+}
+.gioithieu {
+    position: relative;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: blue;
+    top: 20px;
+}
+.intro {
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    top: 30px;
+    color: white;
+}
+.calendar {
+    width: 40%;
+}
+.divTimetour {
+    display: flex;
+    position: relative;
+    top: 40px;
+}
+.divLocation {
+    display: flex;
+    position: relative;
+    top: 45px;
+}
+.btnDatngay {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 10px;
+    top: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.support {
+    position: absolute;
+    width: 250px;
+    height: 270px;
+    background-image: linear-gradient(to right, #5ECDE1, #2CAEE2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
