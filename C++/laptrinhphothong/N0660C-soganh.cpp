@@ -4,27 +4,29 @@ int main()
 {
     string str;
     cin >> str;
-    int res = 0, j = 1;
-    for (int i = str.length() / 2; i >= 0; i--)
+    int res = 0, x = 0;
+    for (int i = str.length() / 2 + 1; i < str.length(); i++)
     {
-        if (str[i] == str[str.length() - j])
+        if (str[0] == str[i])
         {
-            res++;
-            j++;
-            for (int x = i - 1; x >= 0; x--)
+            for (int j = i; j < str.length(); j++)
             {
-                if (str[x] == str[str.length() - j])
+                if (str[x] == str[j])
                 {
                     res++;
-                    j++;
+                    x++;
                 }
                 else
                 {
-                    res = -1;
-                    break;
+                    res = 0;
+                    x = 0;
+                    continue;
                 }
             }
         }
     }
-    cout << res;
+    if (res == 0)
+        cout << "-1";
+    else
+        cout << res;
 }

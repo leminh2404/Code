@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Đăng nhập</title>
+</head>
+<style>
+    .container {
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-width: 1px;
+        border-color: black;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        min-width: 35em;
+        height: 40em;
+        border-width: 2px;
+        background-color: #ffffff;
+        border-radius: 20px;
+    }
+
+    .loginBox {
+        position: relative;
+        margin-top: -3em
+    }
+
+    .loginText {
+        font-family: 'Segoe UI';
+        font-weight: bold;
+        font-size: 2em;
+        color: #333333
+    }
+
+    .picture {}
+
+    .son-main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .picture-son-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 30em;
+        border-width: 1px;
+    }
+
+    .login-box-son-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        height: 100%;
+        border-width: 1px;
+    }
+
+    .account-input-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+    }
+
+    .login-button-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+    }
+
+    .login-button {
+        cursor: pointer;
+        width: 60%;
+        height: 70%;
+        border-radius: 50px;
+        border-style: hidden;
+        background-color: #57b846;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        font-family: 'Segoe UI';
+        font-size: 1em;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .login-button:hover {
+        background-color: #333333
+    }
+
+    input[type="text"] {
+        padding-left: 30px;
+        border-radius: 50px;
+        width: 60%;
+        height: 100%;
+        border-style: hidden;
+        background-color: #e6e6e6;
+        font-family: 'Segoe UI';
+        font-weight: bold;
+    }
+
+    .email-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 35%;
+    }
+
+    .password-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 35%;
+    }
+
+    .forgot-or-signup-box {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .link-text {
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        font-family: 'Segoe UI';
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #9ba6b7
+    }
+
+    .link-text:hover {
+        color: #57b846;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="main">
+            <div class="son-main">
+                <div class="picture-son-main">
+                    <img src="~/wwwroot/img.png" />
+                </div>
+                <div class="login-box-son-main">
+                    <div>
+                        <p class="loginText">Đăng nhập</p>
+                    </div>
+                    <div class="account-input-box">
+                        <div class="email-box">
+                            <i class="fa-solid fa-envelope fa-beat"></i>
+                            <input type="text" placeholder="Email" />
+                        </div>
+                        <div class="password-box">
+                            <i class="fa-solid fa-envelope fa-beat"></i>
+                            <input type="text" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="login-button-box">
+                        <button type="button" class="login-button">Đăng nhập</button>
+                    </div>
+                    <div class="forgot-or-signup-box">
+                        <a href="https://github.com" class="link-text">Quên mật khẩu?</a>
+                        <div style="font-size:0.8em;font-family:'Segoe UI';font-weight:bold">hoặc</div>
+                        <a href="https://github.com" class="link-text">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

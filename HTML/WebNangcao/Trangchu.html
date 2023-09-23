@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Trang chủ</title>
+</head>
+<style>
+    .container {
+        width: 100%;
+        min-width: 60vw;
+        height: 100vh;
+    }
+
+    /* .border {
+        border-style: dashed;
+        border-width: 1px;
+    } */
+
+    .header {
+        margin-top: 1vh;
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 20%;
+        height: 100%;
+        position: relative;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        padding-left: 30px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        border-style: hidden;
+        background-color: #e6e6e6;
+        font-family: 'Segoe UI';
+        font-weight: bold;
+    }
+
+    .login-button-box {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-button {
+        width: 80%;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        background-color: #0a95ff;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .avatar-after-login {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: red;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+    }
+
+    .avatar-options {}
+
+    .login-button:hover {
+        background-color: #0074cc;
+    }
+
+    .instroduction {
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .question-box {
+        width: 75%;
+        height: 100%;
+    }
+
+    .answer-button {
+        width: 20%;
+        height: 10%;
+    }
+
+    .content-box {
+        width: 100%;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu {
+        position: relative;
+        margin-top: 1vh;
+        width: 25%;
+        height: 35vh;
+        min-height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ask-button {
+        width: 90%;
+        height: 6vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        background-color: #0a95ff;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .ask-button:hover {
+        background-color: #0074cc;
+    }
+
+    .menu-button {
+        width: 60%;
+        height: 6vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        background-color: #4CAF50;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .menu-button:hover {
+        background-color: #357a38;
+    }
+
+    .vertical-line {
+        position: relative;
+        border-right: 1px solid #333;
+        height: 95%;
+        margin-left: -2vw;
+    }
+
+    .content {
+        width: 73%;
+        min-height: 300px;
+        position: relative;
+        margin-top: 1vh;
+        margin-right: 1vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .questions-list-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .questions-box {
+        width: 100%;
+        height: 11vh;
+        border-radius: 20px;
+        margin-top: 1.5vh;
+        display: flex;
+        align-items: center;
+        border-color: black;
+        border-width: 1px;
+        border-style: groove;
+    }
+
+    .avatar-box {
+        width: 8%;
+        min-width: 70px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .avatar {
+        width: 55px;
+        min-width: 55px;
+        height: 55px;
+        border-radius: 50px;
+        border-width: 1px;
+        border-style: groove;
+        border-color: black;
+        margin-left: 0.5vw;
+    }
+
+    .filter-section {
+        width: 10%;
+        height: 6vh;
+        background-color: #ffffff;
+        border-width: 1px;
+        border-style: groove;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .title-box {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1vw;
+        position: relative;
+    }
+
+    .tags-and-comments-box {
+        margin-left: auto;
+        width: 30%;
+        height: 100%;
+        display: flex;
+    }
+
+    .tags-box {
+
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-content: space-around;
+    }
+
+    .tag-box {
+        background-color: #e1ecf4;
+        border-radius: 5px;
+        width: 30%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tag {
+        color: #3973a8;
+        font-size: 0.8em;
+    }
+
+    .comment-box {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .title {
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        height: 60%;
+        padding: 8px;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        color: black;
+    }
+
+    .title-link {
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        color: black;
+    }
+
+    .title-link:hover {
+        color: #4caf50;
+    }
+
+    .time {
+        position: relative;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        font-size: 0.7em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="header border">
+            <div class="logo border">
+                <div class="question-box">
+
+                </div>
+                <div class="answer-button">
+
+                </div>
+            </div>
+            <div class="search-bar border">
+                <input type="text" placeholder="Bạn muốn tìm gì?">
+            </div>
+            <div class="login-button-box border">
+                <div class="avatar-after-login border">
+                    LM
+                </div>
+            </div>
+        </div>
+        <div class="instroduction border">
+            Ảnh hoặc lời giới thiệu về trang web
+        </div>
+        <div class="content-box border">
+            <div class="menu border">
+                <div style="position: relative; padding-left: 1vw;">
+                    <button type="button" class="ask-button">Đặt một câu hỏi</button>
+                </div>
+                <div style="position: relative; padding-left: 1vw;">
+                    <button type="button" class="menu-button">Lọc câu hỏi theo tag</button>
+                </div>
+                <div style="position: relative; padding-left: 1vw;">
+                    <button type="button" class="menu-button">Lọc câu hỏi theo tag</button>
+                </div>
+                <div style="position: relative; padding-left: 1vw;">
+                    <button type="button" class="menu-button">Lọc câu hỏi theo tag</button>
+                </div>
+                <div style="position: relative; padding-left: 1vw;">
+                    <button type="button" class="menu-button">Lọc câu hỏi theo tag</button>
+                </div>
+            </div>
+            <div class="content border">
+                <div class="vertical-line">
+                </div>
+                <div class="questions-list-box border">
+                    <div style="width: 100%;height: 6vh;">
+                        <select class="filter-section border">
+                            <option>Mới nhất</option>
+                            <option>Cũ nhất</option>
+                            <option>Nhiều tương tác</option>
+                            <option>Chưa có câu trả lời</option>
+                        </select>
+                    </div>
+                    <div class="questions-box border">
+                        <div class="avatar-box">
+                            <div class="avatar">
+                            </div>
+                        </div>
+                        <div class="title-box border">
+                            <div class="title"><a href="" class="title-link">Cách cài React Native Expo và
+                                    chạy trên máy ảo android
+                                    (Android
+                                    Studio)</a>
+                            </div>
+                            <div class="time">
+                                Ngày đăng: 24/04/2020
+                            </div>
+                        </div>
+                        <div class="tags-and-comments-box">
+                            <div class="tags-box border">
+                                <div class="tag-box border">
+                                    <p class="tag">Java</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C++</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C#</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">Javascript</p>
+                                </div>
+                            </div>
+                            <div class="comment-box border">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z" />
+                                </svg>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions-box border">
+                        <div class="avatar-box">
+                            <div class="avatar">
+                            </div>
+                        </div>
+                        <div class="title-box border">
+                            <div class="title"><a href="" class="title-link">Cách cài React Native Expo và
+                                    chạy trên máy ảo android
+                                    (Android
+                                    Studio)</a>
+                            </div>
+                            <div class="time">
+                                Ngày đăng: 24/04/2020
+                            </div>
+                        </div>
+                        <div class="tags-and-comments-box">
+                            <div class="tags-box border">
+                                <div class="tag-box border">
+                                    <p class="tag">Java</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C++</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C#</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">Javascript</p>
+                                </div>
+                            </div>
+                            <div class="comment-box border">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z" />
+                                </svg>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions-box border">
+                        <div class="avatar-box">
+                            <div class="avatar">
+                            </div>
+                        </div>
+                        <div class="title-box border">
+                            <div class="title"><a href="" class="title-link">Cách cài React Native Expo và
+                                    chạy trên máy ảo android
+                                    (Android
+                                    Studio)</a>
+                            </div>
+                            <div class="time">
+                                Ngày đăng: 24/04/2020
+                            </div>
+                        </div>
+                        <div class="tags-and-comments-box">
+                            <div class="tags-box border">
+                                <div class="tag-box border">
+                                    <p class="tag">Java</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C++</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C#</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">Javascript</p>
+                                </div>
+                            </div>
+                            <div class="comment-box border">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z" />
+                                </svg>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions-box border">
+                        <div class="avatar-box">
+                            <div class="avatar">
+                            </div>
+                        </div>
+                        <div class="title-box border">
+                            <div class="title"><a href="" class="title-link">Cách cài React Native Expo và
+                                    chạy trên máy ảo android
+                                    (Android
+                                    Studio)</a>
+                            </div>
+                            <div class="time">
+                                Ngày đăng: 24/04/2020
+                            </div>
+                        </div>
+                        <div class="tags-and-comments-box">
+                            <div class="tags-box border">
+                                <div class="tag-box border">
+                                    <p class="tag">Java</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C++</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C#</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">Javascript</p>
+                                </div>
+                            </div>
+                            <div class="comment-box border">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z" />
+                                </svg>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions-box border">
+                        <div class="avatar-box">
+                            <div class="avatar">
+                            </div>
+                        </div>
+                        <div class="title-box border">
+                            <div class="title"><a href="" class="title-link">Cách cài React Native Expo và
+                                    chạy trên máy ảo android
+                                    (Android
+                                    Studio)</a>
+                            </div>
+                            <div class="time">
+                                Ngày đăng: 24/04/2020
+                            </div>
+                        </div>
+                        <div class="tags-and-comments-box">
+                            <div class="tags-box border">
+                                <div class="tag-box border">
+                                    <p class="tag">Java</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C++</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">C#</p>
+                                </div>
+                                <div class="tag-box border">
+                                    <p class="tag">Javascript</p>
+                                </div>
+                            </div>
+                            <div class="comment-box border">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z" />
+                                </svg>
+                                <p>1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

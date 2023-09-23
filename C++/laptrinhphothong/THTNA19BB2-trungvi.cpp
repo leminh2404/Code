@@ -4,16 +4,31 @@ using namespace std;
 void input(int *a, int n)
 {
     for (int i = 0; i < n; i++)
-    {
         cin >> a[i];
-        if (i > 1)
+}
+void QuickSort(int *a, int left, int right)
+{
+    int i, j, x;
+    x = a[(left + right) / 2];
+    i = left;
+    j = right;
+    while (i < j)
+    {
+        while (a[i] < x)
+            i++;
+        while (a[j] > x)
+            j--;
+        if (i <= j)
         {
-            for (int x = 0; x <= i - 1; x++)
-                for (int y = x + 1; y <= i; y++)
-                    if (a[x] > a[y])
-                        swap(a[x], a[y]);
+            swap(a[i], a[j]);
+            i++;
+            j--;
         }
     }
+    if (left < j)
+        QuickSort(a, left, j);
+    if (i < right)
+        QuickSort(a, i, right);
 }
 int main()
 {
@@ -24,6 +39,6 @@ int main()
     while (n % 2 != 1);
     int *a = new int[n];
     input(a, n);
+    QuickSort(a, 0, n - 1);
     cout << a[n / 2];
 }
-/**/
