@@ -1,0 +1,245 @@
+<!-- @model WebNangcao_WebDiendan.Models.TAIKHOAN @{ Layout = null; } -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="~/Content/Dangnhap/Dangnhap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="~/Content/fontawesome-free-6.4.2-web/css/all.min.css"
+    />
+    <script src="~/Areas/Content/SweetAlert/sweetalert2.all.min.js"></script>
+    <title>Đăng nhập</title>
+  </head>
+  <style>
+    .container-login {
+      background: linear-gradient(-135deg, #4158d0, #c850c0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-width: 1px;
+      border-color: black;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .main-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      min-width: 35em;
+      height: 40em;
+      border-width: 2px;
+      background-color: #ffffff;
+      border-radius: 20px;
+    }
+
+    .loginBox {
+      position: relative;
+      margin-top: -3em;
+    }
+
+    .loginText {
+      font-family: "Segoe UI";
+      font-weight: bold;
+      font-size: 2em;
+      color: #333333;
+    }
+
+    .son-main-login {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .picture-son-main-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 30em;
+      border-width: 1px;
+    }
+
+    .login-box-son-main-login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 45%;
+      min-width: 450px;
+      height: 100%;
+      border-width: 1px;
+    }
+
+    .account-input-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 20%;
+      gap: 10px;
+    }
+
+    .login-button-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+    }
+
+    .login-button-dn {
+      cursor: pointer;
+      width: 60%;
+      height: 70%;
+      border-radius: 50px;
+      border-style: hidden;
+      background-color: #57b846;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      font-family: "Segoe UI";
+      font-size: 1em;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .login-button-dn:hover {
+      background-color: darkgreen;
+    }
+
+    .account-input-box input[type="text"] {
+      padding-left: 30px;
+      border-radius: 50px;
+      width: 60%;
+      height: 100%;
+      border-style: hidden;
+      background-color: #e6e6e6;
+      font-family: "Segoe UI";
+      font-weight: bold;
+      outline-color: #5d56cc;
+    }
+
+    .account-input-box input[type="password"] {
+      padding-left: 30px;
+      border-radius: 50px;
+      width: 60%;
+      height: 100%;
+      border-style: hidden;
+      background-color: #e6e6e6;
+      font-family: "Segoe UI";
+      font-weight: bold;
+      outline-color: #5d56cc;
+    }
+
+    .email-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 45px;
+    }
+
+    .password-box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 45px;
+    }
+
+    .forgot-or-signup-box {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .link-text {
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      font-family: "Segoe UI";
+      font-size: 0.8em;
+      font-weight: bold;
+      color: #9ba6b7;
+    }
+
+    .link-text:hover {
+      color: #57b846;
+    }
+    @media (max-width: 50em) {
+      #loginImage {
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <!-- @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { id =
+    "loginForm" })) { -->
+    <div class="container-login">
+      <div class="main-login">
+        <div class="son-main-login">
+          <div class="login-box-son-main-login">
+            <div>
+              <p class="loginText">Đăng ký</p>
+            </div>
+            <div class="account-input-box">
+              <div class="email-box">
+                <input type="text" name="username" placeholder="Username" />
+                <!-- @Html.TextBoxFor(model => model.Taikhoan1) -->
+              </div>
+              <!-- @*@Html.ValidationMessageFor(model => model.Taikhoan1, "", new {
+              @class = "text-danger" })*@ -->
+              <div class="password-box">
+                <input type="password" name="password" placeholder="Password" />
+              </div>
+              <!-- @*@Html.ValidationMessageFor(model => model.Matkhau)*@ -->
+            </div>
+            <div class="login-button-box">
+              <input
+                id="loginForm"
+                name="btnDangnhap"
+                type="submit"
+                class="login-button-dn"
+                value="Đăng ký"
+              />
+            </div>
+            <div class="forgot-or-signup-box">
+              <div
+                style="
+                  font-size: 0.8em;
+                  font-family: 'Segoe UI';
+                  font-weight: bold;
+                "
+              >
+                Bạn đã có tài khoản?
+              </div>
+              <a href="https://github.com" class="link-text">Đăng nhập</a>
+            </div>
+          </div>
+          <div id="loginImage" class="picture-son-main-login">
+            <img src="~/wwwroot/img.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

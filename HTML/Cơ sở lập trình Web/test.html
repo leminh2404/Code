@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 100%;
+      height: 500px;
+      border-width: 1px;
+      display: flex;
+      border-style: groove;
+      border-color: black;
+      position: relative;
+    }
+    .son {
+      border-width: 1px;
+      border-style: groove;
+      border-color: black;
+    }
+    .son1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .son2 {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+    .son3 {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .son4 {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      margin-left: 20px;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .son4:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .son5 {
+      padding: 10px;
+      width: 100px;
+      height: 100px;
+      overflow: auto;
+      background-color: yellow;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="son son1"></div>
+      <div class="son son2"></div>
+      <div class="son son3"></div>
+      <div class="son son4">
+        <div
+          style="
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: white;
+          "
+        ></div>
+      </div>
+      <div class="son son5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+        rerum. Rerum, sequi facilis quidem laudantium impedit dicta quae
+        consequuntur earum numquam tempora, fugiat laboriosam mollitia?
+        Distinctio unde dolorum consequatur iste?
+      </div>
+    </div>
+  </body>
+</html>

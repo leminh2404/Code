@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./Chart.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 50%; height: 300px">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("myChart");
+
+        new Chart(ctx, {
+          type: "pie",
+          data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [
+              {
+                label: "Color",
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                  "rgba(255, 99, 132)",
+                  "rgba(255, 159, 64)",
+                  "rgba(255, 205, 86)",
+                  "rgba(75, 192, 192)",
+                  "rgba(54, 162, 235)",
+                  "rgba(153, 102, 255)",
+                ],
+                borderWidth: 0,
+              },
+            ],
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
