@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int a, b;
-    cin >> a >> b;
-    cout << " c = " << (a & b) + (a | b) + (a ^ b);
+	int y = 1, z =0 ;
+	if(z= y < 0)
+	cout << 1;
 }
