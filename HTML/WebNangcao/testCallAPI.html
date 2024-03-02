@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" id="btnGetUsersList" value="Get users list"/>
+    <table class="usersTable">
+      <tr>
+        <th>Ten</th>
+        <th>Ngay sinh</th>
+        <th>Ngay tham gia</th>
+        <th>Cong viec</th>
+        <th>So diem</th>
+      </tr>
+    </table>
+    <script src="./src/jQuery.js"></script>
+    <script>
+      $("#btnGetUsersList").click(() => {
+        $.ajax({
+          type: "GET",
+          url: "https://hoangminhforum.bsite.net/api/userslist/get",
+          success: (response) => {
+            for (var i = 0; i <= response.length; i++) {
+              const userRow = response[i];
+              const strHTML =
+                '<tr style="text-align: center"><td>' +
+                userRow.Ten +
+                "</td><td>" +
+                userRow.Ngaysinh +
+                "</td><td>" +
+                userRow.Ngaythamgia +
+                "</td><td>" +
+                userRow.Congviec +
+                "</td><td>" +
+                userRow.Sodiem +
+                "</td></tr>";
+              $(".usersTable").append(strHTML);
+            }
+          },
+          error: (err) => {
+            console.log(err);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
