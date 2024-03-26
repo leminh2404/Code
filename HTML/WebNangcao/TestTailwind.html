@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./Tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <div class="grid grid-col-3 h-screen border border-red-500 gap-x-5 gap-y-4 grid-cols-3 md:gap-x-10 px-5 hover:grid-wrap">
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-blue-500">
+      Item 1/1
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-red-500">
+      Item 2/2
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-green-500">
+      Item 3/3
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-yellow-500">
+      Item 4/4
+    </div>
+    <div
+      class="p-5 rounded-lg justify-self-start hover:bg-red-500 border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-purple-500">
+      Item 5/5
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-pink-500">
+      Item 6/6
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-orange-500">
+      Item 7/7
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-gray-500">
+      Item 8/8
+    </div>
+    <div
+      class="p-5 rounded-lg border border-black hover:opacity-50 divide-x flex justify-center items-center font-sans text-xl text-white antialiased hover:subpixel-antialiased hover:diagonal-fractions bg-black">
+      Item 9/9
+    </div>
+  </div>
+  <!-- <table class="w-full md:border-separate table-fixed md:table-auto hover:border-collapse border border-slate-500">
+    <thead>
+      <tr>
+        <th class="border border-slate-600">Song</th>
+        <th class="border border-slate-600">Artist</th>
+        <th class="border border-slate-600">Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-slate-700">The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+        <td class="border border-slate-700">Malcolm Lockyer</td>
+        <td class="border border-slate-700">1961</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-700">Witchy Woman</td>
+        <td class="border border-slate-700">The Eagles</td>
+        <td class="border border-slate-700">1972</td>
+      </tr>
+      <tr>
+        <td class="border border-slate-700">Shining Star</td>
+        <td class="border border-slate-700">Earth, Wind, and Fire</td>
+        <td class="border border-slate-700">1975</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="mx-auto rounded-xl shadow-xl overflow-hidden md:max-w-2xl">
+    <div class="md:flex">
+      <div class="md:shrink-0">
+        <img class="h-48 w-full object-cover md:h-full md:w-48" src="../1124777.jpg" alt="Modern building architecture">
+      </div>
+      <div class="p-8">
+        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
+          accommodation for your team</a>
+        <p class="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in
+          some sunshine? We have a list of places to do just that.</p>
+      </div>
+    </div>
+  </div> -->
+</body>
+
+</html>

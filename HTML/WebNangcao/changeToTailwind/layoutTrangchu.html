@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/Tailwind.js"></script>
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header ">
+            <div class="logo ">
+                <a href="/Trangchu">
+                    <img src="~/wwwroot/logo.png" style="max-width: 100%;max-height:100%;border-radius: 10px;" />
+                </a>
+            </div>
+            <div class="text">
+                <p>A great forum to help you and everyone exchange questions with each other</p>
+            </div>
+            <div id="searchbar" class="search-bar ">
+                <input id="searchbarInput" type="text" placeholder="Bạn muốn tìm gì?" name="searchText">
+            </div>
+            <div class="login-box ">
+                @if (Session["userID"] != null)
+                {
+                <img src="@Session[" anh"]" class="avatar-after-login  dropbtn" style="object-fit: cover"
+                    onclick="myFunction()" />
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/Canhan/Profile/@Session[" userID"]">Cá nhân</a>
+                    <a href="#">Thông báo</a>
+                    <a href="">Chính sách</a>
+                    <a onclick="return validateSignOut('@Session[" userID"]')">Đăng xuất</a>
+                </div>
+                }
+                else
+                {
+                <form style="width: 90%; height: 100%; display: flex; justify-content: center" method="post"
+                    action="/Login/Index">
+                    <input type="submit" class="login-button" value="Đăng nhập" />
+                </form>
+                }
+            </div>
+        </div>
+        @RenderSection("Introduction", false)
+        <div class="content-box ">
+            <div id="sidebar" class="menu-box">
+                <div class="menu">
+                    <div style="position: relative; padding-left: 1vw;">
+                        <input id="btnTaocauhoi" type="submit" class="ask-button" value="Tạo bài viết" />
+                    </div>
+                    @{
+                    WebNangcao_WebDiendan.Models.WEBNANGCAO_WEBDIENDANEntities2 db = new
+                    WebNangcao_WebDiendan.Models.WEBNANGCAO_WEBDIENDANEntities2();
+                    List<string> tags = db.TAG.Select(item => item.Ten).ToList();
+                        foreach (string tag in tags)
+                        {
+                        <form method="get" action="/Trangchu/Tag" style="position: relative; padding-left: 1vw;">
+                            <input type="submit" class="menu-button" name="tag" value="@tag" />
+                        </form>
+                        }
+                        }
+                </div>
+            </div>
+            <div class="content ">
+                <div id="verticalLine" class="vertical-line">
+                </div>
+                <div class="container">
+                    @RenderSection("Body", required: false)
+                </div>
+            </div>
+        </div>
+        <footer>
+            <!-- Nội dung footer -->
+            &copy; Web diễn đàn ASP.NET MVC .NET Framework. Tất cả quyền của bạn được bảo lưu (2023). Sản phẩm của Lê
+            Hoàng Minh
+        </footer>
+    </div>
+</body>
+
+</html> -->
